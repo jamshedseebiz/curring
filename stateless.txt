@@ -1,0 +1,31 @@
+stateless:
+ An application is said to be stateless if every client request is autonomous
+  and does not depend on the server remembering previous requests or preserving 
+  session data in between requests. Every request is handled by the server as 
+  though it were a fresh request, devoid of any previously stored context.
+   Because servers don't have to remember any session-related information,
+    stateless architectures are scalable and perfect for distributed systems.
+
+Applications of Stateless Systems in Real Life
+1. RESTful APIs
+The REST (Representational State Transfer) architecture, which is utilized in web
+ services or APIs, is among the most prevalent real-world uses of statelessness.
+  Because RESTful services adhere to statelessness principles, every request includes
+   all the data the server requires to process it. RESTful APIs are therefore very scalable.
+
+   Example: 
+   You must include all required information in your API request, such as the city name or 
+   coordinates, when using an API to retrieve weather data. No prior requests or answers are saved on the server.
+
+   GET /weather?city=pakistan
+
+   Benefits of Applications Without States:
+Scalability: Because any server can handle any request without requiring state maintenance or coordination with other servers,
+ stateless applications scale easily.
+Simplicity: Since stateless systems do not require session management or server-to-server tracking, they are simpler to administer.
+Failure Recovery: Because a stateless server does not save session state, it can be replaced or restarted in the event of a crash
+ without impacting running sessions.
+However, completely stateless systems can be uncommon in real-world systems. When state needs to be managed for certain reasons
+  it is frequently
+ saved client-side (for example, via cookies or tokens) or in external databases instead of on the application server itself, 
+ maintaining the stateless nature of the
